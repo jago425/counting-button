@@ -4,7 +4,7 @@ export const isEven = (count) => count % 2 === 0;
 
 export const isOdd = (count) => count % 2 !== 0;
 
-export const isPrimecountber = (count) => {
+export const isPrimeNumber = (count) => {
         // Check if count is 1 or less, which cannot be prime, return false
     if (count <= 1) return false;
     // Check count is 2 or 3, which are prime countbers, return true
@@ -20,7 +20,7 @@ export const isPrimecountber = (count) => {
 };
 
 export const isOddAndNotPrime = (count) => {
-    return isOdd(count) && !isPrimecountber(count);
+    return isOdd(count) && !isPrimeNumber(count);
 }
 
 export const determineButtonColor = (count) => {
@@ -28,7 +28,7 @@ export const determineButtonColor = (count) => {
         return 'blue';
     } else if (isOddAndNotPrime(count)) {
         return 'purple';
-    } else if (isPrimecountber(count)) {
+    } else if (isPrimeNumber(count)) {
         return 'green';
     } else {
         return 'teal'; 
