@@ -29,8 +29,8 @@ export const determineButtonColor = (count) => {
     } else if (isOddAndNotPrime(count)) {
         return 'purple';
     } else if (isPrimeNumber(count)) {
-        return 'green';
+        return 'teal';
     } else {
-        return 'teal'; 
+        return 'grean'; 
     }  
 };   

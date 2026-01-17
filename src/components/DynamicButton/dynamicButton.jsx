@@ -7,7 +7,7 @@ const DynamicButton = ({ count, color, onClick }) => {
   }
     return (
         <button onClick={onClick} style={styles} className="jagos-button">
-            I'm a button! Look at me!'
+            Click me and see <br></br>what happens next!
         </button>
     );
 };
