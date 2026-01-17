@@ -29,8 +29,20 @@ export const determineButtonColor = (count) => {
     } else if (isOddAndNotPrime(count)) {
         return 'purple';
     } else if (isPrimeNumber(count)) {
-        return 'green';
+        return 'teal';
     } else {
-        return 'teal'; 
+        return 'green'; 
     }  
 };   
+
+export const determineNumberType = (count => {
+     if (isEven(count)) {
+        return 'even';
+    } else if (isOddAndNotPrime(count)) {
+        return 'odd';
+    } else if (isPrimeNumber(count)) {
+        return 'prime';
+    } else {
+        return 'magic'; 
+    }  
+})
