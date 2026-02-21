@@ -1,6 +1,6 @@
 import React from 'react'
 import { determineNumberType } from '../../utils/doMath';
-import './infoMessage.css';
+import './InfoMessage.css';
 
 const InfoMessage = ({ count }) => {
 const getNumberType = (count) => {

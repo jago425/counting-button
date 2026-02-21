@@ -1,2 +1,2 @@
-import InfoMessage from './infoMessage';
+import InfoMessage from './InfoMessage.jsx';
 export default InfoMessage;

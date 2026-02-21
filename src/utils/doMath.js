@@ -1,5 +1,3 @@
-import React from "react";
-
 export const isEven = (count) => count % 2 === 0;
 
 export const isOdd = (count) => count % 2 !== 0;
@@ -34,3 +32,15 @@ export const determineButtonColor = (count) => {
         return 'grean'; 
     }  
 };   
+
+export const determineNumberType = (count => {
+     if (isEven(count)) {
+        return 'even';
+    } else if (isOddAndNotPrime(count)) {
+        return 'odd';
+    } else if (isPrimeNumber(count)) {
+        return 'prime';
+    } else {
+        return 'magic'; 
+    }  
+})
