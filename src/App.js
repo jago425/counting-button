@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment } from './reduxStore/counterSlice';
 import { determineButtonColor } from './utils/doMath';
 import DynamicButton from './components/DynamicButton';
+import InfoMessage from './components/InfoMessage';
+
 import './App.css';
 
 
@@ -20,6 +22,7 @@ const color = determineButtonColor(count);
   return (
     <div className="App">
       <header className="App-header">
+        <InfoMessage count={count}></InfoMessage>
         <DynamicButton onClick={handleClick} color={color} />
          <img src={logo} className="App-logo" alt="logo" />
       </header> 
