@@ -22,11 +22,11 @@ const color = determineButtonColor(count);
   return (
     <div className="App">
       <header className="App-header">
-        <InfoMessage count={count}></InfoMessage>
-        <DynamicButton onClick={handleClick} color={color} />
          <img src={logo} className="App-logo" alt="logo" />
       </header> 
-      
+      <DynamicButton onClick={handleClick} color={color} />
+            <InfoMessage count={count}></InfoMessage>
+
     </div>
   );
 }
