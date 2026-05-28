@@ -1,27 +1,32 @@
 import logo from './logo.svg';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from './reduxStore/counterSlice';
+import { determineButtonColor } from './utils/doMath';
 import DynamicButton from './components/DynamicButton';
+import InfoMessage from './components/InfoMessage';
+
 import './App.css';
 
 
 function App() {
+  const count = useSelector((state) => state.clickCounter.count)
+  const dispatch = useDispatch()
+
+  const handleClick = () => {
+    dispatch(increment());
+}
+
+const color = determineButtonColor(count);
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        { <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> }
-        {<a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> }
-        <DynamicButton onClick={() => alert('Button clicked!')} />
+         <img src={logo} className="App-logo" alt="logo" />
       </header> 
-      
+      <DynamicButton onClick={handleClick} color={color} />
+            <InfoMessage count={count}></InfoMessage>
+
     </div>
   );
 }
